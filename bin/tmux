@@ -1,0 +1,9 @@
+#!/bin/bash
+# run in Git-Bash. lf doesn't seem to work
+if builtin command -v dos2unix > /dev/null 2>&1; then
+  dos2unix ~/.tmux.conf
+else
+  vim --clean ~/.tmux.conf +'set ff=unix' +wq
+fi
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]:-$0}")" &> /dev/null && pwd 2> /dev/null)"
+"$SCRIPT_DIR/msys-tmux/script" -c "$SCRIPT_DIR/msys-tmux/tmux $*" /dev/null
