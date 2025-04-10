@@ -1,1 +1,1 @@
-%cd%/.env/Scripts/activate
+%cd%/.venv/Scripts/activate

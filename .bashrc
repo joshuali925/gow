@@ -1,3 +1,4 @@
+# this is for gowbash
 # Set bash prompt (\w for whole path, \W for current directory)
 export PS1='\W \$ '
 export PATH=$PATH:$HOME/.local/bin
